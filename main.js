@@ -54,4 +54,15 @@ var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3
         }
     }
-  });
+ })
+
+// Custom validation for phone number field
+const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', function (e) {
+    const inputValue = e.target.value;
+    if (!/^\d{10}$/.test(inputValue)) {
+        phoneInput.setCustomValidity('Please enter a valid 10-digit phone number.');
+    } else {
+        phoneInput.setCustomValidity('');
+    }
+});

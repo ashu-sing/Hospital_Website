@@ -347,14 +347,15 @@
                 </article>
             </div>
 
-            <form action="https://formspree.io/f/mknyakkp" method="POST">
+            <form action="https://formspree.io/f/mnqkjjdg" method="POST">
                 <div class="form__group">
                     <label for="name">Name</label>
-                    <input type="text" placeholder="Enter Your Name" name="Patient's Name" id="name" required>
+                    <input type="text" placeholder="Enter Your Name" name="Patient's Name" id="name" required pattern="[A-Za-z\s]+">
                 </div>
                 <div class="form__group">
                     <label for="phone">Phone Number</label>
-                    <input type="number" placeholder="Enter Phone Number" name="Phone Number" id="phone" required>
+                    <input type="tel" placeholder="Enter Phone Number" name="Phone Number" id="phone" required pattern="[0-9]{10}">
+                    <small>Please enter a valid 10-digit phone number.</small>
                 </div>
                 <div class="form__group">
                     <label for="date">Date</label>
@@ -363,6 +364,7 @@
                 <div class="form__group">
                     <label for="department">Select Department</label>
                     <select name="Department" id="department" required>
+                        <option value="">Select Department</option>
                         <option value="Department One">Department One</option>
                         <option value="Department Two">Department Two</option>
                         <option value="Department Three">Department Three</option>
@@ -372,6 +374,7 @@
                 <div class="form__group">
                     <label for="doctor">Select Doctor</label>
                     <select name="Doctor" id="doctor" required>
+                        <option value="">Select Doctor</option>
                         <option value="Doctor One">Doctor One</option>
                         <option value="Doctor Two">Doctor Two</option>
                         <option value="Doctor Three">Doctor Three</option>
@@ -381,7 +384,7 @@
                 </div>
                 <div class="form__group">
                     <label for="message">Additional Message</label>
-                    <textarea name="Added Message" id="message" rows="6" placeholder="Add a messgae" required></textarea>
+                    <textarea name="Added Message" id="message" rows="6" placeholder="Add a message" required></textarea>
                 </div>
                 <input type="submit" value="Submit Request" class="btn-primary">
             </form>
